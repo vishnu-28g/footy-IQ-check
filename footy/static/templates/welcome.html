@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footy IQ Check</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #f1c40f;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        a {
+            padding: 15px 30px;
+            background: #1abc9c;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        a:hover {
+            background: #16a085;
+            transform: translateY(-3px);
+        }
+
+        @media screen and (max-width: 600px) {
+            a {
+                font-size: 1rem;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🏆 Footy IQ Check Welcomes You</h1>
+
+    <div class="btn-container">
+        <a href="{% url 'begin' %}">Beginner</a>
+        <a href="{% url 'inter' %}">Intermediate</a>
+        <a href="{% url 'pr' %}">Pro</a>
+    </div>
+</body>
+</html>
